@@ -127,6 +127,7 @@ function sendMessageToBot(){
 }
 
 function getMessageFromBot(data){
+    data=formatMessage(data);
     isWaitingForMessage = false;
     chatConvo.removeChild(lastBotSentMessage);
     let newUserText = document.createElement("p");
@@ -165,3 +166,13 @@ openChatButton.addEventListener("click", () => {
     }
     isOptiFlowzChatOpen = !isOptiFlowzChatOpen;
 })
+
+function formatMessage(text) {
+    // **bold** → <strong>bold</strong>
+    let formatted = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+    // \n → <br>
+    formatted = formatted.replace(/\n/g, '<br>');
+
+    return formatted;
+}
