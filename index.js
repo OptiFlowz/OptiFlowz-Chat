@@ -175,10 +175,10 @@ openChatButton.addEventListener("click", () => {
     if(isOptiFlowzChatOpen){
         chat.classList.remove("chat-open");
         chatOpenTimeout = setTimeout(() => {
-            chat.children[2].classList.add("chat-displayNone");
+            chat.children[3].classList.add("chat-displayNone");
         }, 150);
     }else{
-        chat.children[2].classList.remove("chat-displayNone");
+        chat.children[3].classList.remove("chat-displayNone");
         chatOpenTimeout = setTimeout(() => {
             chat.classList.add("chat-open");
         }, 10);
