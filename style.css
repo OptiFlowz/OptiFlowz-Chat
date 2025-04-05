@@ -38,6 +38,9 @@
     flex-direction: column-reverse;
     justify-content: flex-end;
     align-items: flex-end;
+}
+
+.optiflowz-chat-wrapper *{
     font-family: "K2D", sans-serif;
     font-style: normal;
 }
