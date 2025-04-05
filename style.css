@@ -99,7 +99,7 @@ button#openChat{
     max-width: 420px;
     width: calc(100vw - 30px);
     max-height: 600px;
-    height: calc(100vh - 110px);
+    height: calc(100dvh - 110px);
     background-color: var(--chat-chatBackground);
     border-radius: var(--chat-borderRadius);
     border: var(--chat-border);
