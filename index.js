@@ -8,7 +8,7 @@ let optiflowzChat = document.createElement("div");
 optiflowzChat.classList.add("optiflowz-chat-wrapper");
 optiflowzChat.id = "optiflowz-chat";
 optiflowzChat.innerHTML = `
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/OptiFlowz/OptiFlowz-Chat@1.0.3/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/OptiFlowz/OptiFlowz-Chat@1.0.4/style.css">
 <button id="openChat">
             <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 3c5.5 0 10 3.58 10 8s-4.5 8-10 8c-1.24 0-2.43-.18-3.53-.5C5.55 21 2 21 2 21c2.33-2.33 2.7-3.9 2.75-4.5C3.05 15.07 2 13.13 2 11c0-4.42 4.5-8 10-8"></path></svg>
             <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z"></path></svg>
@@ -55,7 +55,8 @@ socket.on('receive_message', (data) => {
 });
 
 socket.on('workflow_step', (data) => {
-    // console.log(data);
+    getStepFromBot(data);
+    console.log(data);
 });
 
 const chat = document.getElementById("optiflowz-chat");;
@@ -135,6 +136,19 @@ function getMessageFromBot(data){
     newUserText.classList.add("botMessage");
     chatConvo.appendChild(newUserText);
     chatConvo.parentElement.scrollTop =  chatConvo.parentElement.scrollHeight;
+}
+
+function getStepFromBot(data){
+    data=formatMessage(data);
+    chatConvo.removeChild(lastBotSentMessage);
+    let newUserText = document.createElement("p");
+    newUserText.innerHTML = data + `\n<paprika><span></span><span></span><span></span></paprika>`;
+    newUserText.classList.add("botMessage");
+    newUserText.classList.add("botWriting");
+    newUserText.classList.add("botWritingStep");
+    chatConvo.appendChild(newUserText);
+    chatConvo.parentElement.scrollTop =  chatConvo.parentElement.scrollHeight;
+    lastBotSentMessage = newUserText;
 }
 
 openChatButton.addEventListener("mousedown", () => {
