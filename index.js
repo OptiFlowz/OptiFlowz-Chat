@@ -1,6 +1,6 @@
 import "https://cdn.socket.io/4.7.2/socket.io.min.js";
 
-const socket = io('https://e029-2a06-63c0-a01-6800-6df9-301e-b6de-df44.ngrok-free.app', {
+const socket = io('https://optiflowz-chat-server.fly.dev', {
     transports: ['websocket'],
 });
 
