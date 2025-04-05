@@ -38,6 +38,7 @@
     flex-direction: column-reverse;
     justify-content: flex-end;
     align-items: flex-end;
+    z-index: 999999999;
 }
 
 .optiflowz-chat-wrapper *{
