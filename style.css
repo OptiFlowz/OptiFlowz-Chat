@@ -41,8 +41,8 @@
 }
 
 .optiflowz-chat-wrapper *{
-    font-family: "K2D", sans-serif;
-    font-style: normal;
+    font-family: "K2D", sans-serif !important;
+    font-style: normal !important;
 }
 
 #openChat{
