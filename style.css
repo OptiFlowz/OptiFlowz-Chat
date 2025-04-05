@@ -50,7 +50,7 @@
     border: none;
     width: 65px;
     height: 65px;
-    border-radius: var(--chat-messageOpenBorderRadius);
+    border-radius: var(--chat-messageOpenBorderRadius) !important;
     cursor: pointer;
     display: flex;
     align-items: center;
