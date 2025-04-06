@@ -6,10 +6,10 @@
     --chat-messageOpenBackground: #748bfb;
     --chat-messageOpenBorderRadius: 50%;
     --chat-border: 1px solid #ffffff;
-    --chat-borderRadius: 15px;
+    --chat-borderRadius: 25px;
 
     /* HEADER */
-    --chat-headerBackground: #000000;
+    --chat-headerBackground: linear-gradient(90deg, #000000, #25242c);
     --chat-headerTitleColor: #ffffff;
     --chat-headerSubTitleColor: #d3d8e2;
 
@@ -49,6 +49,7 @@
 button#openChat{
     background-color: var(--chat-messageOpenBackground);
     border: none;
+    padding: 0px !important;
     width: 65px;
     height: 65px;
     border-radius: var(--chat-messageOpenBorderRadius) !important;
@@ -96,9 +97,9 @@ button#openChat{
 }
 
 .chatWrapper{
-    max-width: 420px;
+    max-width: 430px;
     width: calc(100vw - 30px);
-    max-height: 600px;
+    max-height: 650px;
     height: calc(100dvh - 110px);
     background-color: var(--chat-chatBackground);
     border-radius: var(--chat-borderRadius);
@@ -114,6 +115,11 @@ button#openChat{
     opacity: 0;
     pointer-events: none;
 }
+@media screen and (max-width: 480px) {
+    .chatWrapper{
+        max-height: calc(100dvh - 110px);
+    }
+}
 
 .chat-open .chatWrapper{
     transform: scale(1);
@@ -123,14 +129,15 @@ button#openChat{
 
 .chatHeader{
     box-sizing: border-box;
-    padding: 20px;
-    padding-bottom: 25px;
-    background-color: var(--chat-headerBackground);
+    padding: 30px;
+    padding-bottom: 37px;
+    background: var(--chat-headerBackground);
     width: 100%;
-    height: 100px;
+    height: 120px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -165,17 +172,17 @@ button#openChat{
 
 .chatHeader a{
     opacity: 0.6;
-    top: 15px;
-    right: 15px;
+    top: 20px;
+    right: 20px;
     position: absolute;
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     transition: all .1s ease-in-out;
 }
 .chatHeader svg{
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
 }
 
 .chatHeader a:hover{
@@ -206,7 +213,7 @@ button#openChat{
     font-weight: 400;
     max-width: calc(90% - 40px);
     width: fit-content;
-    padding: 15px;
+    padding: 20px;
     border-radius: 15px;
     margin: 0px;
     word-break: break-word;
@@ -292,6 +299,7 @@ button#openChat{
     flex-grow: 1;
     font-size: 1.1em !important;
     padding: 1rem !important;
+    padding-left: 1.2rem !important;
     resize: none;
     overflow: hidden;
 }
