@@ -1,6 +1,6 @@
 import "https://cdn.socket.io/4.7.2/socket.io.min.js";
 
-const socket = io('https://optiflowz-chat-server.fly.dev', {
+const socket = io('http://localhost:3000', {
     transports: ['websocket'],
 });
 
@@ -114,7 +114,10 @@ function sendMessageToBot(){
         sendMessageButton.classList.remove("clickable");
 
         // console.log(textToSend);
-        socket.emit('send_message', textToSend);
+        socket.emit('send_message', {
+            message: textToSend,
+            webhook: n8nHook // this could also be a full URL
+        });
         isWaitingForMessage = true;
 
         setTimeout(() => {
