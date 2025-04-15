@@ -1,33 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-:root{
-
-    /* MAIN SETTINGS */
-    --chat-messageOpenBackground: #748bfb;
-    --chat-messageOpenBorderRadius: 50%;
-    --chat-border: 1px solid #ffffff;
-    --chat-borderRadius: 25px;
-
-    /* HEADER */
-    --chat-headerBackground: linear-gradient(90deg, #000000, #25242c);
-    --chat-headerTitleColor: #ffffff;
-    --chat-headerSubTitleColor: #d3d8e2;
-
-    /* CONVO */
-    --chat-chatBackground: #ebeff8;
-    --chat-messageBoxShadow: 0px 0px 35px rgba(26, 27, 49, 0.125);
-    --chat-userMessageTextColor: #ffffff;
-    --chat-userMessageBackground: #748bfb;
-    --chat-botMessageColor: #535566;
-    --chat-botWaitingMessageColor: #535566;
-    --chat-botMessageBackground: #ffffff;
-
-    /* MESSAGE INPUT */
-    --chat-inputTopBorderColor: #b0b2c0;
-    --chat-inputBackgroundColor: #ffffff;
-    --chat-inputButtonHoverColor: #748bfb;
-}
-
 .optiflowz-chat-wrapper{
     position: fixed;
     bottom: 0;
