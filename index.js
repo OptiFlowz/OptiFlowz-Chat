@@ -1,6 +1,6 @@
 import "https://cdn.socket.io/4.7.2/socket.io.min.js";
 
-const socket = io('http://localhost:3000', {
+const socket = io('https://optiflowz-chat-server.fly.dev/', {
     transports: ['websocket'],
 });
 
