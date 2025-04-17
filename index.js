@@ -121,12 +121,12 @@ function sendMessageToBot(){
         isWaitingForMessage = true;
 
         setTimeout(() => {
-            newUserText = document.createElement("p");
+            let newUserText2 = document.createElement("p");
             lastBotSentMessage = newUserText;
-            newUserText.innerHTML = `<paprika><span></span><span></span><span></span></paprika>`;
-            newUserText.classList.add("botMessage");
-            newUserText.classList.add("botWriting");
-            chatConvo.appendChild(newUserText);
+            newUserText2.innerHTML = `<paprika><span></span><span></span><span></span></paprika>`;
+            newUserText2.classList.add("botMessage");
+            newUserText2.classList.add("botWriting");
+            chatConvo.appendChild(newUserText2);
             chatConvo.parentElement.scrollTop =  chatConvo.parentElement.scrollHeight;
         }, 300);
     }
